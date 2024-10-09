@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automobile Insurance Fraud Predictor</title>
+    <style>
+        /* Reset default styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        /* Form container styles */
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Heading styles */
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Label styles */
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* Input styles */
+        input,
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        select {
+            height: 46px; /* Match height with input for consistency */
+        }
+
+        /* Submit button styles */
+        input[type="submit"] {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        /* Additional styling for specific elements */
+        .contr {
+            text-align: center;
+        }
+
+        /* Feel free to adjust colors based on your branding */
+
+    </style>
+</head>
+<body>
+    <h1>Automobile Insurance Fraud Predictor</h1>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <label for="claim">Claim Number:</label>
+        <input type="text" name="claim" required>
+
+        <label for="age_of_driver">Age of Driver:</label>
+        <input type="text" name="age_of_driver" required>
+
+        <label for="gender">Gender:</label>
+        <select name="gender" required>
+            <option value="F">F</option>
+            <option value="M">M</option>
+        </select>
+
+        <label for="marital_status">Marital Status:</label>
+        <select name="marital_status" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="safty_rating">Safety Rating:</label>
+        <input type="text" name="safty_rating" required>
+
+        <label for="annual_income">Annual Income:</label>
+        <input type="text" name="annual_income" required>
+
+        <label for="high_education_ind">Higher Education:</label>
+        <select name="high_education_ind" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="address_change_ind">Address Change:</label>
+        <select name="address_change_ind" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="living_status">Living Status:</label>
+        <input type="text" name="living_status" required>
+
+        <label for="accident_site">Accident Site:</label>
+        <input type="text" name="accident_site" required>
+
+        <label for="past_num_of_claims">Past Number of Claims:</label>
+        <input type="text" name="past_num_of_claims" required>
+
+        <label for="witness_present_ind">Witness Present Indicator:</label>
+        <input type="text" name="witness_present_ind" required>
+
+        <label for="liab_prct">Liability Percentage:</label>
+        <input type="text" name="liab_prct" required>
+
+        <label for="channel">Channel:</label>
+        <input type="text" name="channel" required>
+
+        <label for="policy_report_filed_ind">Police Complaint Filed:</label>
+        <select name="policy_report_filed_ind" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="claim_est_payout">Claim Estimated Payout:</label>
+        <input type="text" name="claim_est_payout" required>
+
+        <label for="age_of_vehicle">Age of Vehicle:</label>
+        <input type="text" name="age_of_vehicle" required>
+
+        <label for="vehicle_category">Vehicle Category:</label>
+        <input type="text" name="vehicle_category" required>
+
+        <label for="vehicle_price">Vehicle Price:</label>
+        <input type="text" name="vehicle_price" required>
+
+        <label for="vehicle_weight">Vehicle Weight:</label>
+        <input type="text" name="vehicle_weight" required>
+
+        <label for="latitude">Latitude:</label>
+        <input type="text" name="latitude" required>
+
+        <label for="longitude">Longitude:</label>
+        <input type="text" name="longitude" required>
+
+        <div class="contr">
+            <h4 class="section-heading text-white">You can select the file (image) and click Upload button</h4>
+        </div>
+
+        <input type="file" name="file" class="file">
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
